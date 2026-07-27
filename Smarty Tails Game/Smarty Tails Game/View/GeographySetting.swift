@@ -10,6 +10,7 @@ import SwiftUI
 struct GeographySetting: View {
     
     @Binding var showSettings: Bool
+    @Binding var isPaused: Bool
     
     var body: some View {
         
@@ -38,6 +39,7 @@ struct GeographySetting: View {
                     Button {
                         withAnimation(.easeInOut(duration: 0.4)) {
                             showSettings = false
+                            isPaused = false
                         }
                     } label: {
                         Image("BtnContinueSettingWallpaper")
@@ -52,5 +54,5 @@ struct GeographySetting: View {
 }
 
 #Preview {
-    GeographySetting(showSettings: .constant(false))
+    GeographySetting(showSettings: .constant(false), isPaused: .constant(false))
 }
