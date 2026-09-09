@@ -54,12 +54,12 @@ struct Subject: View {
                                         .fill(Color(red: 7/255, green: 39/255, blue: 21/255))
                                         .frame(width: 162, height: 32)
                                     
-                                    Text("Top score: 0")
+                                    Text("Top score: \(GameStore.topScore(for: .mathematics))")
                                         .fontWeight(.black)
                                         .foregroundStyle(.white)
                                 }
                                 Button {
-                                    
+                                    currentScreen = .mathematics
                                 } label: {
                                     Image("BtnMathematicsWallpaper")
                                         .resizable()
@@ -72,12 +72,12 @@ struct Subject: View {
                                         .fill(Color(red: 7/255, green: 39/255, blue: 21/255))
                                         .frame(width: 162, height: 32)
                                     
-                                    Text("Top score: 0")
+                                    Text("Top score: \(GameStore.topScore(for: .chemistry))")
                                         .fontWeight(.black)
                                         .foregroundStyle(.white)
                                 }
                                 Button {
-                                    
+                                    currentScreen = .chemistry
                                 } label: {
                                     Image("BtnChemistryWallpaper")
                                         .resizable()
@@ -90,7 +90,7 @@ struct Subject: View {
                                         .fill(Color(red: 7/255, green: 39/255, blue: 21/255))
                                         .frame(width: 162, height: 32)
                                     
-                                    Text("Top score: 0")
+                                    Text("Top score: \(GameStore.topScore(for: .geography))")
                                         .fontWeight(.black)
                                         .foregroundStyle(.white)
                                 }
@@ -111,12 +111,12 @@ struct Subject: View {
                                         .fill(Color(red: 7/255, green: 39/255, blue: 21/255))
                                         .frame(width: 162, height: 32)
                                     
-                                    Text("Top score: 0")
+                                    Text("Top score: \(GameStore.topScore(for: .mixed))")
                                         .fontWeight(.black)
                                         .foregroundStyle(.white)
                                 }
                                 Button {
-                                    
+                                    currentScreen = .mixed
                                 } label: {
                                     Image("BtnMixedWallpaper")
                                         .resizable()

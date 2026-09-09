@@ -10,9 +10,9 @@ import SwiftUI
 struct SettingScreenMenu: View {
 
     @Binding var showSetting: Bool
-    
-    @State private var isVibration = true
-    @State private var isSound = true
+    @AppStorage("isVibrationEnabled") private var isVibration = true
+    @AppStorage("isSoundEnabled") private var isSound = true
+    @Environment(\.requestReview) private var requestReview
     
     var body: some View {
         
@@ -49,7 +49,7 @@ struct SettingScreenMenu: View {
                     }
                     
                     Button {
-                        
+                        requestReview()
                     } label: {
                         Image("BtnRateWallpaper")
                             .resizable()
@@ -77,5 +77,4 @@ struct SettingScreenMenu: View {
 #Preview {
     SettingScreenMenu(showSetting: .constant(true))
 }
-
 

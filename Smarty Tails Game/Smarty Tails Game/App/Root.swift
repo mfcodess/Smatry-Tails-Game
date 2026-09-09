@@ -33,11 +33,19 @@ struct Root: View {
         case .subject:
             Subject(currentScreen: $currentScreen)
             
+        case .mathematics:
+            QuizGame(subject: .mathematics, currentScreen: $currentScreen)
+
+        case .chemistry:
+            QuizGame(subject: .chemistry, currentScreen: $currentScreen)
+
         case .geography:
-            Geography(currentScreen: $currentScreen)
+            QuizGame(subject: .geography, currentScreen: $currentScreen)
+
+        case .mixed:
+            QuizGame(subject: .mixed, currentScreen: $currentScreen)
         }
     }
 }
-
 
 
