@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SettingScreenMenu: View {
 
     @Binding var showSetting: Bool
     @AppStorage("isVibrationEnabled") private var isVibration = true
     @AppStorage("isSoundEnabled") private var isSound = true
-    @Environment(\.requestReview) private var requestReview
+    @Environment(\.requestReview) private var requestReview: RequestReviewAction
     
     var body: some View {
         
@@ -77,4 +78,3 @@ struct SettingScreenMenu: View {
 #Preview {
     SettingScreenMenu(showSetting: .constant(true))
 }
-

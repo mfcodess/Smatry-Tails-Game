@@ -19,7 +19,7 @@ struct QuizGame: View {
     @AppStorage("isVibrationEnabled") private var isVibrationEnabled = true
 
     private let questions: [QuizQuestion]
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
 
     @State private var lives = 3
     @State private var currentQuestionIndex = 0
@@ -78,15 +78,7 @@ struct QuizGame: View {
                 ResultOverlay(result: result, score: score, restart: restart, leave: { currentScreen = .subject })
             }
         }
-        .onReceive(timer) { _ in
-            guard !isPaused, result == nil else { return }
-            if time > 0 {
-                time -= 1
-            } else {
-                finish(.lost)
             }
-        }
-    }
 
     private var header: some View {
         VStack(spacing: -12) {
