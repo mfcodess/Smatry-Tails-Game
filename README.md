@@ -1,3 +1,5 @@
+<img width="150" alt="Group 3-12" src="https://github.com/user-attachments/assets/dc8687b5-30a3-4b40-b7b9-3643a0607b1f"/>
+
 # Smart Tails Game
 
 Створено за допомогою фреймворку SwiftUI. На розробку проєкту знадобилося близько 3 тижнів.
