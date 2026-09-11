@@ -21,7 +21,7 @@
 # APP
 Інформаційний екран
 
-<img src="Image/11.gif" alt="" width="450" height="700">
+https://github.com/user-attachments/assets/e69af50b-1f31-4768-8b0a-7aa909ed770c
 
 Екран покупок
 
